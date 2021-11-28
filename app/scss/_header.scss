@@ -1,0 +1,15 @@
+.header{
+  padding: 70px 0;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+&__inner{
+  display: flex;
+}
+&__list{
+  display: flex;
+}
+
+}
