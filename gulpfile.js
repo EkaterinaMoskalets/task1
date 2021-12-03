@@ -6,6 +6,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+const jquery  = require('jquery');
+const mixitup  = require(' mixitup');
 const browserSync = require('browser-sync').create();
 
 function browsersync() {

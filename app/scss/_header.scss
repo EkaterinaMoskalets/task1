@@ -1,15 +1,45 @@
-.header{
-  padding: 70px 0;
+.header {
+  padding: 61px 0 57px 0;
 }
 
-.menu{
+.menu {
   display: flex;
   justify-content: space-between;
-&__inner{
-  display: flex;
-}
-&__list{
-  display: flex;
+  align-items: center;
+
+  &__inner {
+    display: flex;
+    padding-right: 15px;
+  }
+
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+  &__link {
+    line-height: 100%;
+    font-size: 18px;
+  }
 }
 
+.user-nav {
+  position: relative;
+
+  &__link {
+    display: inline-block;
+    @extend %bg;
+  }
+  &__num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    font-size: 10px;
+    color: $btnfont;
+    background-color: $accent;
+    border-radius: 50%;
+    text-align: center;
+    right: -11px;
+  }
 }

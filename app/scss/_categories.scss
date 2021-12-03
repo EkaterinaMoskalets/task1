@@ -1,0 +1,154 @@
+.categories {
+  &__filter {
+    display: flex;
+    margin-bottom: 45px;
+  }
+  .categories__elem:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__btn {
+    padding: 22px 32px 22px 86px;
+    background-color: #ffffff;
+    border: 1px #f9faff solid;
+    border-radius: 5px;
+    background-size: 44px 44px;
+    background-repeat: no-repeat;
+    background-position: left 32px center;
+  }
+  &__title {
+    margin-bottom: 60px;
+  }
+}
+.stock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    margin-bottom: 30px;
+  }
+}
+.cheeseburger-card {
+  padding: 15px 15px;
+  background-color: $btnfont;
+  display: inline-block;
+  font-size: 15px;
+
+  &__img {
+    @extend %bg;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  &__title {
+    font-weight: 400;
+    max-width: 180px;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+  &__price {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+.beefburger-card {
+  padding: 20px 29px;
+  background-color: $btnfont;
+  display: inline-block;
+  font-size: 15px;
+
+  &__img {
+    @extend %bg;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-weight: 400;
+    max-width: 180px;
+    margin-bottom: 20px;
+  }
+  &__price {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+.kingcheeseburger-card {
+  padding: 20px 15px;
+  background-color: $btnfont;
+  display: inline-block;
+  font-size: 15px;
+
+  &__img {
+    @extend %bg;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-weight: 400;
+    max-width: 180px;
+    margin-bottom: 28px;
+    line-height: 1;
+  }
+  &__price {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+.blackburger-card {
+  padding: 20px 29px;
+  background-color: $btnfont;
+  display: inline-block;
+  font-size: 15px;
+
+  &__img {
+    @extend %bg;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-weight: 400;
+    max-width: 180px;
+    margin-bottom: 28px;
+    line-height: 1;
+  }
+  &__price {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+.chikenburger-card {
+  padding: 20px 29px;
+  background-color: $btnfont;
+  display: inline-block;
+  font-size: 15px;
+
+  &__img {
+    @extend %bg;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-weight: 400;
+    max-width: 180px;
+    margin-bottom: 28px;
+    line-height: 1;
+  }
+  &__price {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+}
+.burger__btn {
+  font-size: 14px;
+  padding: 7px 16px;
+  background-color: $accent;
+  border-radius: 6px;
+  line-height: 130%;
+  color: $btnfont;
+}

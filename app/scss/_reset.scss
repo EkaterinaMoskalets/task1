@@ -31,9 +31,10 @@ blockquote,
 dl,
 dd {
   margin: 0;
+ 
 }
 
-ul {
+ul  {
   list-style: none;
 }
 
@@ -52,4 +53,11 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  outline: transparent;
 }
