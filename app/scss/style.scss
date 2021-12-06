@@ -2,11 +2,13 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'mixins';
 @import 'global';
 
 
-@import 'header';
+@import 'components/header';
+@import 'components/menu';
 @import 'hero';
 @import 'categories';
 @import 'footer';
-@import 'media';
+

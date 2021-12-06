@@ -1,0 +1,48 @@
+.header {
+  padding: 61px 0 57px 0;
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__inner {
+    display: flex;
+    padding-right: 15px;
+  }
+}
+@import 'components/menu';
+
+
+.user-nav {
+  position: relative;
+
+  &__link {
+    display: inline-block;
+  width: 44px;
+  height: 44px;
+  }
+
+  &__profile{
+    width: 19px;
+    height: 19px;
+    fill: lavender;
+    fill: transparent;
+    stroke: #000;
+    stroke-width:1.5;
+  }
+
+  &__num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    font-size: 10px;
+    color:$white;
+    background-color: $accent;
+    border-radius: 50%;
+    text-align: center;
+    right: 5px;
+    top: 5px;
+  }
+}

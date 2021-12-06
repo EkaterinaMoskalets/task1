@@ -1,3 +1,3 @@
 $(function(){
-  var mixer = mixitup('.works__wrapper');
+  var mixer = mixitup('.top-product__list');
 });
