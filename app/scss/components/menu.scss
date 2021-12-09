@@ -6,8 +6,8 @@
 
   &__list {
     display: flex;
-  }
 
+  }
   &__item{ 
     &:not(:last-child) {
     margin-right: 45px;}
@@ -16,5 +16,7 @@
   &__link {
     line-height: 100%;
     font-size: 18px;
+    transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s, color ease-in-out 0.7s;
+    
   }
 }

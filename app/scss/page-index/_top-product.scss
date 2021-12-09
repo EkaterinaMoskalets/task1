@@ -1,0 +1,88 @@
+.top-product {
+  &__filter {
+    display: flex;
+    margin-bottom: 45px;
+  }
+
+  &__elem {
+    &:not(last-chuld) {
+      margin-right: 20px;
+    }
+  }
+
+  &__btn {
+    padding: 13px 32px;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #e5e5e5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s, background-color ease 0.5s;
+
+    &:focus {
+      border-radius: 5px;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:hover {
+      background-color: rgba(255, 122, 80, 0.1);
+      border-radius: 5px;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      color: $accent;
+      fill: accent;
+    }
+
+    &:hover .top-product__profile {
+      fill: $accent;
+    }
+
+    &:active {
+      box-shadow: inset 0 -5px 12px 0 rgba(255, 104, 56, 0.2);
+      border-radius: 5px;
+    }
+  }
+
+  &__profile {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+}
+
+.product-list__btn {
+  padding: 2px;
+  border-bottom: 1px solid #000;
+  line-height: 0.8;
+
+  &:hover,
+  &:active {
+    border: transparent;
+  }
+}
+
+.mixitup-control-active {
+  background-color: $accent;
+  color: $white;
+}
+
+.mixitup-control-active .top-product__profile {
+  fill: $white;
+}
+
+@import "../components/_product-card";

@@ -16,6 +16,7 @@ const svgSprite = require('gulp-svg-sprite');
 const replace = require('gulp-replace');
 const cheerio = require('gulp-cheerio');
 const fileInclude   = require('gulp-file-include');
+const svgo  = require('svgo');
 const browserSync = require('browser-sync').create();
 
 const htmlInclude = () => {

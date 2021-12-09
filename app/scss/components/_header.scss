@@ -1,5 +1,5 @@
 .header {
-  padding: 61px 0 57px 0;
+  padding: 60px 0 50px 0;
 
   &__menu {
     display: flex;
@@ -9,40 +9,27 @@
 
   &__inner {
     display: flex;
-    padding-right: 15px;
+  }
+  
+}
+
+@import "components/menu";
+
+.logo {
+  transition: box-shadow ease-in-out 0.5s, opacity ease 0.5s,
+    opacity ease 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+  &:focus{  
+    border-radius: 5px;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }
 }
-@import 'components/menu';
 
-
-.user-nav {
-  position: relative;
-
-  &__link {
-    display: inline-block;
-  width: 44px;
-  height: 44px;
-  }
-
-  &__profile{
-    width: 19px;
-    height: 19px;
-    fill: lavender;
-    fill: transparent;
-    stroke: #000;
-    stroke-width:1.5;
-  }
-
-  &__num {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    font-size: 10px;
-    color:$white;
-    background-color: $accent;
-    border-radius: 50%;
-    text-align: center;
-    right: 5px;
-    top: 5px;
-  }
-}
+@import "components/user-nav";

@@ -1,0 +1,64 @@
+.user-nav {
+  position: relative;
+
+  &__link {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s, background-color ease 0.5s;
+
+    &:hover {
+      background-color: $accent;
+      border-radius: 5px;
+    }
+
+    &:hover .user-nav__profile {
+      stroke: $white;
+    }
+
+    &:hover+.user-nav__num {
+      background-color: $white;
+      color: $accent;
+    }
+
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      border-radius: 5px;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:focus .user-nav__profile {
+      stroke: $default;
+    }
+
+    &:active {
+      background-color: rgba(255, 122, 80, 0.1);
+      border-radius: 5px;
+    }
+
+  }
+
+
+  &__profile {
+    width: 20px;
+    height: 20px;
+    fill: lavender;
+    fill: transparent;
+    stroke: #000;
+    stroke-width: 1.5;
+  }
+
+  &__num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    font-size: 10px;
+    color: $white;
+    background-color: $accent;
+    border-radius: 50%;
+    text-align: center;
+    right: 5px;
+    top: 5px;
+
+  }
+}

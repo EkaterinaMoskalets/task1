@@ -8,7 +8,8 @@
 
 @import 'components/header';
 @import 'components/menu';
-@import 'hero';
-@import 'categories';
-@import 'footer';
-
+@import 'components/_footer';
+@import 'page-index/hero';
+@import 'page-index/top-product';
+@import 'components/product-card';
+@import 'components/user-nav.scss';
