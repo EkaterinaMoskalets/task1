@@ -45,12 +45,12 @@ body {
   font-size: 18px;
   line-height: 130%;
   color: $white;
-  transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s,background-color ease 0.5s;
+  transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s, background-color ease 0.5s;
+
   &:focus {
-    background-color: rgba(255, 122, 80, 0.1);
+    background-color: $light-orange;
     color: $accent;
-    border-radius: 5px;
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    @extend%orang-border;
   }
 
   &:hover {
@@ -62,31 +62,48 @@ body {
   }
 
   &:active {
-    background-color: rgba(255, 122, 80, 0.1);
+    background-color: $light-orange;
     border: transparent;
     color: $accent;
   }
 }
-.text-decoration{
+
+.text-decoration {
   transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s, color ease-in-out 0.7s;
+
   &:hover {
     color: #ff6838;
   }
 
   &:focus {
-    border-radius: 5px;
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    @extend%orang-border;
   }
-  
+
   &:active {
     color: $default;
     border-radius: 5px;
-    text-shadow: 2px 2px 5px  rgba(49, 53, 43, 0.5);
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     box-shadow: 0 0 0 0 transparent;
   }
 }
 
-.focus-decoration:focus{
-      border-radius: 5px;
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+.logo {
+  transition: box-shadow ease-in-out 0.5s, opacity ease 0.5s,
+    opacity ease 0.5s;
+
+  &:hover {
+    opacity: 0.8;
   }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    @extend%orang-border;
+  }
+}
+
+.focus-decoration:focus {
+  @extend%orang-border;
+}

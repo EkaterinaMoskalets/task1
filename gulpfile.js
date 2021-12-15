@@ -16,7 +16,6 @@ const svgSprite = require('gulp-svg-sprite');
 const replace = require('gulp-replace');
 const cheerio = require('gulp-cheerio');
 const fileInclude   = require('gulp-file-include');
-const svgo  = require('svgo');
 const browserSync = require('browser-sync').create();
 
 const htmlInclude = () => {
@@ -30,7 +29,7 @@ const htmlInclude = () => {
 }
 
 const svgSprites = () => {
-  return src(['app/images/icons/**.svg'])
+  return src(['app/images/icons/*.svg'])
     .pipe(cheerio({
       run: function ($) {
         $('[fill]').removeAttr('fill');
@@ -49,7 +48,7 @@ const svgSprites = () => {
         }
       },
     }))
- .pipe (dest('app/images/icons'))
+ .pipe (dest('app/images'))
 }
 
 function browsersync() {
@@ -78,6 +77,7 @@ function styles() {
 function scripts() {
   return src(['node_modules/jquery/dist/jquery.js',
       'node_modules/mixitup/dist/mixitup.js',
+      'node_modules/slick-carousel/slick/slick.js',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -112,10 +112,10 @@ function cleanDist() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js', '!app/js/main.min.js '], scripts);
+  watch(['app/js/**/*.js','!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
-  watch(['app/images/svg/**.svg'],svgSprites);
-  watch(['app/images/svg/**.svg']).on('change',browserSync.reload);
+  watch(['app/images/icons/**.svg'],svgSprites);
+  watch(['app/images/icons/**.svg']).on('change',browserSync.reload);
   watch(['app/html/**/*.html'], htmlInclude);
   watch(['app/scss/**/*.scss']).on('change',browserSync.reload)
 }

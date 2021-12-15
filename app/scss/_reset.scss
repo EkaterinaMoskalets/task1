@@ -31,10 +31,10 @@ blockquote,
 dl,
 dd {
   margin: 0;
- 
+
 }
 
-ul  {
+ul {
   list-style: none;
 }
 
@@ -43,6 +43,12 @@ img {
   display: block;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 a {
   text-decoration: none;
   color: inherit;
@@ -60,4 +66,13 @@ button {
   border: transparent;
   cursor: pointer;
   outline: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
 }

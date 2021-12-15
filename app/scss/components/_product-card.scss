@@ -1,6 +1,5 @@
 .product-card {
-  padding: 21px 15px;
-  display: inline-block;
+  padding: 21px 14px;
   font-size: 15px;
   background-color: $white;
   max-width: 210px;
@@ -13,23 +12,22 @@
 
   &__img {
     margin: 0 20px 10px 20px;
-  }
 
-  &__img--long {
-    margin: 0 auto;
-    margin: 0 20px 10px 20px;
+    &--long {
+      margin: 0 auto;
+      margin: 0 20px 10px 20px;
+    }
   }
 
   &__title {
-
     margin-bottom: 28px;
     line-height: 1.2;
     display: block;
     font-size: 15px;
-  }
 
-  &__title--long {
-    margin-bottom: 15px;
+    &--long {
+      margin-bottom: 15px;
+    }
   }
 
   &__price {
@@ -47,7 +45,7 @@
     padding: 7px 16px;
     background-color: $accent;
     border-radius: 6px;
-    line-height: 130%;
+    line-height: 1.3;
     color: $white;
     transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s, background-color ease 0.5s;
   }

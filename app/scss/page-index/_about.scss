@@ -1,0 +1,59 @@
+.about {
+  &__title {
+    margin-bottom: 30px;
+    max-width: 98%;
+  }
+
+  &__inner {
+    display: flex;
+    padding-left: 70px;
+
+  }
+
+  &__content {
+    width: 41%;
+    padding-top: 60px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+
+  &__list {
+    margin-bottom: 35px;
+  }
+
+  &__elem {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    color: $title;
+    font-size: 24px;
+    padding-left: 65px;
+    background-size: 34px 34px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat
+  }
+
+  &__elem-timer {
+    background-image: url('../../images/timer-icon.svg');
+  }
+
+  &__elem-delivery {
+    background-image: url('../../images/delivery-icon.svg');
+  }
+
+  &__elem-restaurant {
+    background-image: url('../../images/restaurant-icon.svg');
+  }
+
+  &__img {
+    width: 440px;
+    height: 585px;
+    margin-right: 120px;
+    @extend%bg;
+
+  }
+}

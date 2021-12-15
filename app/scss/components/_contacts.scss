@@ -4,30 +4,31 @@
   padding-right: 80px;
 
   &__item {
-    margin-bottom: 15px;
-  }
-
-  &__info {
-    padding-left: 30px;
-    background-size: 24px 22px;
-    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    padding-top: 5px;
   }
 
   &__info {
     &:not(:last-child) {
       margin-bottom: 25px;
     }
+
+    padding-left: 30px;
+    background-size: 24px 22px;
+    background-repeat: no-repeat;
+
+    &--location {
+      background-image: url("../images/icons/location.svg");
+    }
+
+    &--calling {
+      background-image: url("../images/icons/calling.svg");
+    }
+
+    &--message {
+      background-image: url("../images/icons/message.svg");
+    }
+
   }
-}
 
-.contacts__info--location {
-  background-image: url("../images/icons/Location.svg");
-}
-
-.contacts__info--calling {
-  background-image: url("../images/icons/Calling.svg");
-}
-
-.contacts__info--message {
-  background-image: url("../images/icons/Message.svg");
 }

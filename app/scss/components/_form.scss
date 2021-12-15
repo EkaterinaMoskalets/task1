@@ -1,0 +1,36 @@
+.form {
+  &__input {
+    margin-bottom: 12px;
+    padding: 13px 15px;
+    font-size: 14px;
+    border: 1px #c2c2c2 solid;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 14px;
+
+    &:hover .form__profile {
+      fill: $accent;
+    }
+
+    &:focus .form__profile {
+      fill: $accent;
+    }
+
+    &:active .form__profile {
+      fill: $accent;
+    }
+  }
+
+  &__profile {
+    fill: $white;
+    width: 15px;
+    height: 15px;
+  }
+}
