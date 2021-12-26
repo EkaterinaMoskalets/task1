@@ -18,7 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s, background-color ease 0.5s;
+    transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s,
+      background-color ease 0.5s;
 
     &:focus {
       @extend%orang-border;
@@ -28,7 +29,7 @@
       background-color: $light-orange;
       @extend%orang-border;
       color: $accent;
-      fill: accent;
+      fill:$accent;
     }
 
     &:hover .top-product__profile {
@@ -63,14 +64,25 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-
-  &__item {
-    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+    @include r(992) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px; 
+    }
+    @include r(767) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px; 
+    }
+    @include r(576) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px; 
+    }
   }
 
   .mixitup-control-active {

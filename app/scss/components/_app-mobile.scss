@@ -10,31 +10,29 @@
     padding-top: 40px;
   }
 
+  &__elem {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
   &__title {
     margin-bottom: 45px;
   }
 
-  &__text {
+  &__text p {
     margin-bottom: 30px;
+    opacity: 0.9;
   }
 
   &__list {
     display: flex;
   }
 
-  &__link {
-    width: 120px;
-    height: 40px;
-    display: block;
-
-    &--apple {
-      margin-right: 30px;
-      background-image: url('../../images/appsrote.svg');
-    }
-
-    &--google {
-      width: 135px;
-      background-image: url('../../images/playmarket.svg');
-    }
+  &__img {
+    width: 570px;
+    height: 380px;
+    @extend%bg;
+    object-fit: cover;
   }
 }

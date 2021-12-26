@@ -6,10 +6,10 @@
     margin-bottom: 45px;
   }
 
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
   }
 
 }

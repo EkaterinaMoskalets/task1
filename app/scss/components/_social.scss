@@ -34,7 +34,7 @@
       background-color:$light-orange ;
       @extend%orang-border;
       color: $accent;
-      fill: accent;
+      fill:$accent;
       border-radius: 50%;
     }
 
@@ -53,8 +53,6 @@
       stroke: $accent;
       box-shadow: transparent;
     }
-
   }
-
 }
 

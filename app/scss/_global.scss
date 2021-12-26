@@ -90,6 +90,7 @@ body {
 .logo {
   transition: box-shadow ease-in-out 0.5s, opacity ease 0.5s,
     opacity ease 0.5s;
+  object-fit: cover;
 
   &:hover {
     opacity: 0.8;

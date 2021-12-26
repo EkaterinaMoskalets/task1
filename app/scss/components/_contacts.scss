@@ -9,14 +9,14 @@
   }
 
   &__info {
-    &:not(:last-child) {
-      margin-bottom: 25px;
-    }
-
     padding-left: 30px;
     background-size: 24px 22px;
     background-repeat: no-repeat;
 
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+    
     &--location {
       background-image: url("../images/icons/location.svg");
     }

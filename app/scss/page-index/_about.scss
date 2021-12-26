@@ -2,6 +2,7 @@
   &__title {
     margin-bottom: 30px;
     max-width: 98%;
+    @include line-clamp(36, 1.3, 2);
   }
 
   &__inner {
@@ -15,9 +16,10 @@
     padding-top: 60px;
   }
 
-  &__text {
+  &__text p {
     margin-bottom: 30px;
     opacity: 0.9;
+    @include line-clamp(20, 1.5, 5);
   }
 
   &__list {
@@ -25,28 +27,31 @@
   }
 
   &__elem {
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
+
     color: $title;
-    font-size: 24px;
     padding-left: 65px;
     background-size: 34px 34px;
     display: flex;
     align-items: center;
-    background-repeat: no-repeat
-  }
+    background-repeat: no-repeat;
+     &:not(:last-child) {
+      margin-bottom: 20px;
+      @include line-clamp(24, 1.5, 1);
+    }
 
-  &__elem-timer {
-    background-image: url('../../images/timer-icon.svg');
-  }
+    &--timer {
+      background-image: url('../images/content/timer-icon.svg');
+    }
 
-  &__elem-delivery {
-    background-image: url('../../images/delivery-icon.svg');
-  }
+    &--delivery {
+      background-image: url('../images/content/delivery-icon.svg');
+    }
 
-  &__elem-restaurant {
-    background-image: url('../../images/restaurant-icon.svg');
+    &--restaurant {
+      background-image: url('../images/content/restaurant-icon.svg');
+    }
+
+    @include line-clamp(24, 1.5, 1);
   }
 
   &__img {
@@ -54,6 +59,6 @@
     height: 585px;
     margin-right: 120px;
     @extend%bg;
-
+    object-fit: cover;
   }
 }

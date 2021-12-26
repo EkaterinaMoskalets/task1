@@ -3,7 +3,6 @@
   max-width: 370px;
   background-color: $white;
   border-radius: 10px;
-  margin-bottom: 28px;
   box-shadow: 0 3px 3px 0 $light-orange;
   transition: box-shadow ease 0.5s;
 
@@ -17,6 +16,8 @@
 
   &__img {
     margin-bottom: 15px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
   }
 
   &__title {
@@ -31,7 +32,7 @@
     padding-left: 32px;
     background-size: 22px 22px;
     background-repeat: no-repeat;
-    background-image: url('../../images/timer.svg');
+    background-image: url('../images/timer.svg');
     background-position: left top 5px;
   }
 
@@ -68,7 +69,6 @@
     &:active .restauran-card__profile {
       fill: $accent;
     }
-
   }
 
   &__profile {
@@ -76,5 +76,12 @@
     height: 15px;
     stroke: $white;
     fill: $white;
+    position: relative;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: translateX(200%);
+
+    }
   }
 }
