@@ -1,17 +1,57 @@
 .top-restaurans {
   text-align: center;
   padding: 120px 0 85px 0;
-
+  @include r(992) {
+    padding:70px 0 ;
+  }
+  @include r(767) {
+    padding:40px 0 ;
+  }
   &__title {
     margin-bottom: 45px;
   }
 
-  &__list{
+  &__list {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     gap: 30px;
-  }
+
+    @include r(992) {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      gap: 30px;
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+    
+      @include r(776) {
+        position: absolute;
+        bottom: -40px;
+        li {
+          button {
+            &:not(last-child) {
+              margin-left: 15px;
+            }
+            padding: 0;
+            font-size: 0;
+            background-color: $grey;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+          }
+          &.slick-active {
+            button {
+              background-color: $accent;
+            }
+            
+          }
+        }
+      }
+    }
+     }
 
 }
+
 
 @import "../components/_restauran-card";

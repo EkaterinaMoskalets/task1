@@ -9,15 +9,17 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
- align-items: center;
-  
- &:hover {
+  align-items: center;
+
+  &:hover {
     box-shadow: 0 0 0 1px #FF6838;
     border-radius: 5px;
   }
+
   @include r(576) {
     max-width: 235px;
   }
+
   &__img {
     margin: 0 20px 8px 20px;
     object-fit: cover;
@@ -31,7 +33,6 @@
 
   &__inner {
     margin-top: auto;
-
   }
 
   &__price {

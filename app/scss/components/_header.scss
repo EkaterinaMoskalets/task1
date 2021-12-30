@@ -1,14 +1,25 @@
 .header {
   padding: 60px;
 
+  @include r(992) {
+    padding: 25px 10px;
+  }
+
   &__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include r(776) {
+      align-items: center;
+    }
   }
 
   &__inner {
     display: flex;
+
+    @include r(992) {
+      margin-left: auto;
+    }
   }
-  
 }

@@ -22,6 +22,71 @@
       <a class="logo" href="#header">
         <img class="logo__img focus-decoration" src="images/content/logo.svg" alt="Логотип" width="200" height="39">
       </a>
+      <button class="burger">
+        <span class="burger__stripes"></span>
+        <span class="sr-only">Открытие меню навигации</span>
+    </button>
+    <div class="burger-menu">
+      <a class="burger-menu__logo">
+        <img class="burger-menu__logoimg focus-decoration" src="images/content/logo.svg" alt="Логотип" width="200" height="39">
+      </a>
+      <ul class="burger-menu__item">
+        <li class="burger-menu__elem">
+          <a class="burger-menu__link text-decoration" href="#">Главная</a>
+        </li>
+        <li class="burger-menu__elem">
+          <a class="burger-menu__link text-decoration" href="#">Блюда</a>
+        </li>
+        <li class="burger-menu__elem">
+          <a class="burger-menu__link text-decoration" href="#">Контакты</a>
+        </li>
+      </ul>
+      <address class="contacts">
+        <ul class="contacts__item">
+          <li class="contacts__info contacts__info--location">
+            <a class="contacts__link " href="#">
+              ул. Смирнова 2/3
+            </a>
+          </li>
+          <li class="contacts__info  contacts__info--calling">
+            <a class="contacts__link" href="tel:79068057043:">
+              79068057043
+            </a>
+          </li>
+          <li class="contacts__info contacts__info--message">
+            <a class="contacts__link " href="mailto:support@sfood.com">
+              support@sfood.com
+            </a>
+          </li>
+        </ul>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__profile">
+                <use xlink:href="images/sprite.svg#ic-facebook"></use>
+              </svg>
+              <span class="sr-only">перейти на фейсбук</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__profile">
+                <use xlink:href="images/sprite.svg#ic-twitter"></use>
+              </svg>
+              <span class="sr-only">перейти в твиттер</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__profile">
+                <use xlink:href="images/sprite.svg#ic-instagram"></use>
+              </svg>
+              <span class="sr-only">перейти в инстаграм</span>
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
       <div class="header__inner">
         <ul class="menu">
           <li class="menu__item">
@@ -81,7 +146,7 @@
     <h2 class="title top-product__title">
       Популярные категории
     </h2>
-    <!-- <ul class="top-product__filter">
+    <ul class="top-product__filter">
       <li class="top-product__elem">
         <button class="top-product__btn" data-filter="all" type="button">
           <svg class="top-product__profile">
@@ -122,7 +187,7 @@
           Cеты
         </button>
       </li>
-    </ul> -->
+    </ul>
     <ul class="top-product__list">
       <li class="top-product__item mix sandwich">
         <article class="product-card">
@@ -261,8 +326,8 @@
           <div class="restauran-card__content">
             <h3 class="restauran-card__title">Blaze Pizza</h3>
             <div class="restauran-card__top">
-              <time class="restauran-card__time" datatime="09:00 - 21:00"">11:00 - 22:00</е>
-              <a class="btn restauran-card__link" href="#">
+              <time class="restauran-card__time"datatime="09:00 - 21:00">12:00 - 21:00</time>
+              <a class=" btn restauran-card__link" href="#">
                 <svg class="restauran-card__profile">
                   <use xlink:href="images/sprite.svg#arrow"></use>
                 </svg>
@@ -476,7 +541,6 @@
             <svg class="form__profile">
               <use xlink:href="images/sprite.svg#telegram"></use>
             </svg>
-
             Подписаться</button>
         </form>
       </div>
@@ -564,6 +628,7 @@
         </ul>
       </address>
     </div>
+    
   </div>
   <div class="footer__bottom">
     © 2021 Simple Food

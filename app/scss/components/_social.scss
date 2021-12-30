@@ -31,10 +31,10 @@
     }
 
     &:focus {
-      background-color:$light-orange ;
+      background-color: $light-orange;
       @extend%orang-border;
       color: $accent;
-      fill:$accent;
+      fill: $accent;
       border-radius: 50%;
     }
 
@@ -44,7 +44,7 @@
     }
 
     &:active {
-      background-color:$light-orange ;
+      background-color: $light-orange;
       border-radius: 50%;
     }
 
@@ -55,4 +55,3 @@
     }
   }
 }
-

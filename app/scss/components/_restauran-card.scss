@@ -10,6 +10,10 @@
     box-shadow: 0 3px 15px 0 rgba(255, 104, 56, 0.5);
   }
 
+  @include r(992) {
+    max-width: 450px;
+  }
+
   &__content {
     padding: 0 20px 23px 20px;
   }
@@ -18,6 +22,10 @@
     margin-bottom: 15px;
     border-radius: 10px 10px 0 0;
     object-fit: cover;
+
+    @include r(992) {
+      width: 450px;
+    }
   }
 
   &__title {
@@ -32,7 +40,7 @@
     padding-left: 32px;
     background-size: 22px 22px;
     background-repeat: no-repeat;
-    background-image: url('../images/timer.svg');
+    background-image: url('../images/content/timer.svg');
     background-position: left top 5px;
   }
 
@@ -81,7 +89,6 @@
 
     &:hover {
       transform: translateX(200%);
-
     }
   }
 }

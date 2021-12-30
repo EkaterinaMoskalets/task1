@@ -1,0 +1,32 @@
+.burger-menu {
+  display: none;
+  background-color: $white;
+  width: 87%;
+  z-index: 5;
+  transition: transform 0.5s;
+  position: absolute;
+  padding-left: 15px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateY(-200%);
+
+  @include r(992) {
+    display: block;
+  }
+
+  &__item {
+    padding: 25px 0 ;
+    border-top: 1px solid rgba(194, 194, 194, 0.2);
+  }
+
+  &__logo {
+    padding: 25px 0;
+  }
+}
+
+.burger-menu.active {
+  transform: translateY(0);
+  transition: transform 0.7s;
+}
