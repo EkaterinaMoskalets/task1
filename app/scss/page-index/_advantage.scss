@@ -1,36 +1,35 @@
-.about {
+.advantage {
+  @include r(767) {
+    padding-bottom: 30px;
+  }
+
   &__title {
     margin-bottom: 30px;
   }
 
   &__inner {
     display: flex;
-    padding-left: 70px;
-    position: relative;
+   justify-content: space-around;
+   align-items: center;
 
     @include r(767) {
+      position: relative;
       justify-content: center;
       padding-left: 0;
     }
   }
 
   &__content {
-    width: 41%;
-    padding-top: 60px;
-    position: relative;
-    z-index: 2;
-
-    @include r(1200) {
-      width: 48%;
-    }
-
+    width: 40%;
+  
     @include r(992) {
-      padding-top: 35px;
-      width: 55%;
+      width: 50%;
+      padding-top: 30px;
     }
 
     @include r(767) {
       width: 87%;
+      z-index: 2;
     }
 
     @include r(576) {
@@ -50,16 +49,20 @@
 
   &__list {
     margin-bottom: 35px;
+
+    @include r(767) {
+      margin-bottom: 25px;
+    }
   }
 
   &__elem {
-    color: $title;
-    padding-left: 65px;
-    background-size: 34px 34px;
     display: flex;
     align-items: center;
-    background-repeat: no-repeat;
+    padding-left: 65px;
+    color: $title;
     font-size: 24px;
+    background-size: 34px 34px;
+    background-repeat: no-repeat;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -79,32 +82,30 @@
 
     @include r(1200) {
       font-size: 18px;
-      padding-left: 40px;
-      background-size: 28px 28px;
+      background-size: 32px 32px;
+      padding: 1px 0 3px 45px;
     }
   }
 
   &__img {
     width: 440px;
     height: 585px;
-    margin-right: 120px;
     @extend%bg;
-    object-fit: cover;
     background-size: contain;
-
-    @include r(1200) {
-      margin-right: 45px;
-    }
 
     @include r(992) {
       width: 348px;
       max-height: 462px;
+      margin-right: 60px;
+      @include r(767) {
+        opacity: 0.2;
+      }
     }
 
     @include r(767) {
       position: absolute;
-      opacity: 0.3;
       margin-right: 0;
+      padding-left: 40px;
     }
   }
 }

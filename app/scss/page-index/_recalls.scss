@@ -18,6 +18,10 @@
     margin-bottom: 48px;
     padding-right: 50px;
 
+    @include r(840) {
+      justify-content: inherit;
+    }
+
     @include r(992) {
       padding-right: 0;
       margin-bottom: 15px;
@@ -29,8 +33,8 @@
   }
 
   &__content {
-    max-width: 570px;
     position: relative;
+    max-width: 570px;
 
     @include r(992) {
       max-width: 455px;
@@ -39,7 +43,6 @@
     @include r(767) {
       max-width: 265px;
     }
-    
   }
 
   &__text p {
@@ -47,45 +50,43 @@
     font-style: italic;
 
     @include r(992) {
-      font-size: 17px;
       margin-bottom: 20px;
+      font-size: 17px;
     }
 
     @include r(776) {
       font-size: 14px;
     }
-    &::before {
+
+    &::before,
+    &::after {
       content: " ";
       position: absolute;
       width: 24px;
       height: 20px;
       background-repeat: no-repeat;
       background-size: cover;
-      left:-7%;
+      background-image: url("../images/slider/quotes-top.svg");
+    }
+
+    &::before {
+      left: -7%;
+
       @include r(776) {
-        left:-14%;
+        left: -13%;
+        top: -3%;
       }
     }
 
-    &::before {
-      background-image: url("../images/slider/quotes-top.svg");
-    }
-    
     &::after {
-      content: " ";
-      position: absolute;
-      width: 24px;
-      height: 20px;
-      background-repeat: no-repeat;
-      background-size: cover;
       bottom: 36%;
-      right: -8%;
-    }
+      right: -5%;
+      transform: scale(-1, 1);
 
-    &::after {
-      background-image: url("../images/slider/quotes-bottom.svg");
+      @include r(776) {
+        right: -13%;
+      }
     }
-  
   }
 
   &__img {
@@ -117,11 +118,12 @@
   }
 
   &__subtitle {
+    display: block;
+    margin-bottom: 5px;
     color: $accent;
     line-height: 1.3;
     font-size: 20px;
-    margin-bottom: 5px;
-    display: block;
+
     @include r(776) {
       font-size: 16px;
     }
@@ -131,77 +133,125 @@
     font-size: 14px;
     line-height: 1.3;
   }
+
   .slick-dots {
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
-  
+
     @include r(776) {
-      visibility: hidden;
       position: absolute;
+      visibility: hidden;
     }
-  
+
     li {
       button {
         &:not(last-child) {
           margin-left: 15px;
         }
-  
+
+        width: 15px;
+        height: 15px;
         padding: 0;
         font-size: 0;
         background-color: $grey;
-        width: 15px;
-        height: 15px;
         border-radius: 50%;
+
+        &:focus {
+          box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+        }
+
+        &:hover {
+          background-color: $light-orange;
+          box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+        }
+
+        &:active {
+          background-color: $light-orange;
+          border: transparent;
+          color: $accent;
+        }
       }
-  
+
       &.slick-active {
+        
         button {
           background-color: $accent;
         }
       }
     }
   }
-  
-  
+
   .slider-recall__arrow {
-    font-size: 0;
-    width: 34px;
-    height: 34px;
-    border: 3px solid $grey;
-    border-radius: 50%;
-    background-repeat: no-repeat;
     position: absolute;
     bottom: 0;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-  
+    width: 34px;
+    height: 34px;
+    font-size: 0;
+    border: 3px solid $grey;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    transition: box-shadow ease-in-out 0.5s, background-color ease 0.5s;
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:hover {
+      background-color: $light-orange;
+      border: 2px $accent solid;
+      stroke: $accent;
+
+      .slider-recall {
+
+        &__profile {
+          background-color: $light-orange;
+          fill: $accent;
+          stroke: $accent;
+        }
+      }
+    }
+
+    &:active {
+      background-color: $light-orange;
+      border: transparent;
+      box-shadow: transparent;
+    }
+
     @include r(776) {
       top: 20%;
     }
-  
+
     @include r(576) {
       top: 9%;
     }
   }
-  
+
   .slider-recall__arrow--prev {
     position: absolute;
     left: 43%;
-  
+
+    @include r(992) {
+      left: 41%;
+    }
+
     @include r(776) {
       left: 16%;
     }
   }
-  
+
   .slider-recall__arrow--next {
     position: absolute;
     left: 59%;
-  
+
+    @include r(992) {
+      left: 61%;
+    }
+
     @include r(776) {
       left: 85%;
     }
   }
 }
-

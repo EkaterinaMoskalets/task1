@@ -5,6 +5,22 @@
     padding: 25px 10px;
   }
 
+  @include r(776) {
+    padding: 15px 10px 40px 0;
+  }
+
+  &-logo__img {
+    @include r(992) {
+      width: 150px;
+      height: 30px;
+    }
+
+    @include r(776) {
+      width: 115px;
+      height: 23px;
+    }
+  }
+
   &__menu {
     display: flex;
     justify-content: space-between;

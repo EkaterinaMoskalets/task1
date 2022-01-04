@@ -1,20 +1,23 @@
 <header class="header">
   <div class="container">
     <nav class="header__menu">
-      <a class="logo" href="#header">
-        <img class="logo__img focus-decoration" src="images/content/logo.svg" alt="Логотип" width="200" height="39">
+      <a class="logo header__logo">
+        <img class="logo__img logo header-logo__img focus-decoration" src="images/content/logo.svg" alt="Логотип" width="200" height="39">
       </a>
       <button class="burger">
         <span class="burger__stripes"></span>
-        <span class="sr-only">Открытие меню навигации</span>
+        <span class="sr-only">Открыть меню</span>
     </button>
-    <div class="burger-menu">
-      <a class="burger-menu__logo">
-        <img class="burger-menu__logoimg focus-decoration" src="images/content/logo.svg" alt="Логотип" width="200" height="39">
-      </a>
+    <div class="burger-menu"> 
+        <a class=" logo burger-menu__logo">
+          <img class="burger-menu__img focus-decoration" src="images/content/logo.svg" alt="Логотип" width="200" height="39">
+        </a>
+        <button class="burger-menu__btn">
+          <span class="sr-only">закрыть меню</span>
+      </button>
       <ul class="burger-menu__item">
         <li class="burger-menu__elem">
-          <a class="burger-menu__link text-decoration" href="#">Главная</a>
+          <a class="burger-menu__link burger-menu__link--orange text-decoration" href="#">Главная</a>
         </li>
         <li class="burger-menu__elem">
           <a class="burger-menu__link text-decoration" href="#">Блюда</a>

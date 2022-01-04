@@ -3,7 +3,7 @@
   max-width: 370px;
   background-color: $white;
   border-radius: 10px;
-  box-shadow: 0 3px 3px 0 $light-orange;
+  box-shadow: 0 3px 3px 0 $grey;
   transition: box-shadow ease 0.5s;
 
   &:hover {
@@ -35,9 +35,9 @@
   }
 
   &__time {
-    font-size: 18px;
     display: flex;
     padding-left: 32px;
+    font-size: 18px;
     background-size: 22px 22px;
     background-repeat: no-repeat;
     background-image: url('../images/content/timer.svg');
@@ -50,32 +50,46 @@
   }
 
   &__link {
-    width: 79px;
-    height: 33px;
     background-color: $accent;
     border-radius: 20px;
     padding: 10px 33px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s, background-color ease 0.5s;
+    transition: box-shadow ease-in-out 0.5s, background-color ease 0.5s;
 
-    &:hover,
-    &:focus,
+    &:hover {
+      background-color: $white;
+      box-shadow: 0 0 0 2px $accent;
+
+      .restauran-card {
+        &__profile {
+          transform: translateX(140%);
+          fill: $accent;
+        }
+      }
+    }
+
     &:focus {
-      border-radius: 20px;
+      background-color: $light-orange;
+      box-shadow: 0 0 0 2px $accent;
+
+      .restauran-card {
+        &__profile {
+          fill: $accent;
+        }
+      }
     }
 
-    &:hover .restauran-card__profile {
-      fill: $accent;
-    }
+    &:active {
+      background-color: $light-orange;
+      box-shadow: 0 0 0 0 transparent;
 
-    &:focus .restauran-card__profile {
-      fill: $accent;
-    }
-
-    &:active .restauran-card__profile {
-      fill: $accent;
+      .restauran-card {
+        &__profile {
+          transform: translateX(0);
+        }
+      }
     }
   }
 
@@ -86,9 +100,5 @@
     fill: $white;
     position: relative;
     transition: transform 0.5s ease;
-
-    &:hover {
-      transform: translateX(200%);
-    }
   }
 }

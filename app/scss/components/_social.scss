@@ -15,25 +15,24 @@
   }
 
   &__link {
-    display: block;
-    width: 39px;
-    height: 39px;
-    background-color: $silver;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 39px;
+    height: 39px;
+    background-color: $silver;
     border-radius: 50%;
-    transition: box-shadow ease-in-out 0.5s, background-color ease 0.5s;
+    transition: box-shadow ease-in-out 0.7s,color  0.7s, stroke 0.5s, background-color ease 0.7s,fill ease 0.7s;
 
     &:hover {
       background-color: $accent;
-      border-radius: 50%;
+    
     }
 
     &:focus {
+      color: $accent;
       background-color: $light-orange;
       @extend%orang-border;
-      color: $accent;
       fill: $accent;
       border-radius: 50%;
     }

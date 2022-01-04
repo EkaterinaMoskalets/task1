@@ -10,44 +10,28 @@
 
   &__stripes {
     position: absolute;
+    top: 22px;
     width: 30px;
-    right: 1px;
-    background-color: $title;
     height: 2px;
-    top: 18px;
+    background-color: $title;
   }
 
   &::before,
   &::after {
-    width: 30px;
     content: '';
     position: absolute;
-    right: 1px;
+    width: 30px;
     height: 2px;
     background-color: $title;
     transition: transform ease 0.5s;
   }
 
   &::before {
-    top: 8px;
+    top: 12px;
   }
 
   &::after {
-    bottom: 14px;
+    bottom: 10px;
   }
 
-}
-
-.burger.active span {
-  transform: scale(0);
-}
-
-.burger.active::before {
-  transform: rotate(45deg);
-  top: 19px;
-}
-
-.burger.active::after {
-  transform: rotate(-45deg);
-  bottom: 23px;
 }

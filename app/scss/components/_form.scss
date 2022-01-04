@@ -1,18 +1,26 @@
 .form {
   &__input {
+    width: 100%;
     margin-bottom: 12px;
     padding: 13px 15px;
     font-size: 14px;
-    border: 1px #c2c2c2 solid;
+    border: 1px $grey solid;
     border-radius: 5px;
-    width: 100%;
+
+    &:hover::placeholder {
+      color: $title;
+    }
+
+    &:focus {
+      border: 1px $accent solid;
+    }
   }
 
   &__btn {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
     font-size: 14px;
 
     &:hover .form__profile {
@@ -29,8 +37,8 @@
   }
 
   &__profile {
-    fill: $white;
     width: 15px;
     height: 15px;
+    fill: $white;
   }
 }

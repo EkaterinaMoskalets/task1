@@ -1,4 +1,8 @@
 .app-mobile {
+  @include r(767) {
+    padding-top: 20px;
+  }
+
   &__inner {
     display: flex;
     text-align: left;
@@ -22,8 +26,12 @@
 
     @include r(767) {
       margin-right: 0;
-      width: 100%;
+      width: 75%;
       padding-top: 0;
+    }
+
+    @include r(576) {
+      width: 100%;
     }
   }
 
@@ -54,8 +62,8 @@
     }
 
     @include r(767) {
-      font-size: 14px;
       margin-bottom: 15px;
+      font-size: 14px;
     }
   }
 
@@ -67,7 +75,6 @@
     width: 570px;
     height: 380px;
     @extend%bg;
-    object-fit: cover;
     background-size: contain;
 
     @include r(992) {

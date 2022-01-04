@@ -1,17 +1,22 @@
 .footer {
+  &__link {
+    @include r(992) {
+      padding: 12px 0;
+    }
+  }
 
   &__top {
-    font-size: 18px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 60px;
+    font-size: 18px;
     line-height: 1.3;
 
     @include r(576) {
       flex-direction: column;
     }
 
-    @include r(825) {
+    @include r(992) {
       flex-wrap: wrap;
       justify-content: space-evenly;
       padding-bottom: 30px;
@@ -25,7 +30,7 @@
       margin-right: 35px;
     }
 
-    @include r(825) {
+    @include r(992) {
       order: 2;
     }
 
@@ -33,28 +38,30 @@
       order: 1;
       margin: 0 0 30px 0;
     }
-
   }
 
   &__logo {
-    margin-bottom: 20px;
-    display: inline-block;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 39px;
+  }
+
+  &-logo__img {
+    margin-bottom: 30px;
   }
 
   &__list {
     column-count: 3;
 
-    @include r(825) {
+    @include r(992) {
       margin-bottom: 30px;
     }
 
     @include r(576) {
-      column-count: 1;
       margin-bottom: 0;
-    }
-
-    @include r(576) {
+      column-count: 1;
       order: 3;
+      font-size: 18px;
     }
   }
 
@@ -67,11 +74,11 @@
   &__bottom {
     display: flex;
     justify-content: center;
-    font-size: 14px;
     padding: 30px 0;
+    font-size: 14px;
     border-top: 1px solid rgba(194, 194, 194, 0.2);
 
-    @include r(825) {
+    @include r(992) {
       padding: 20px 0;
     }
   }
