@@ -1,4 +1,7 @@
 $(function () {
+
+  $(".price-filter__input").ionRangeSlider();
+
   $('.slider-recalls').slick({
     dots: true,
     arrows: true,
@@ -11,7 +14,7 @@ $(function () {
   });
   $('.burger-menu__btn,.burger-menu').on('click', function () {
     $('.burger,.burger-menu').removeClass('active');
-   
+
   });
   $(window).on('load resize', function () {
     if ($(window).width() < 620) {
@@ -27,9 +30,10 @@ $(function () {
         slidesToShow: 1
       });
     } else {
-      $(".top-resturans__list.slick-initialized").slick("unslick");
+      $(".top-restaurans__list.slick-initialized").slick("unslick");
     }
   });
+
 });
 
 

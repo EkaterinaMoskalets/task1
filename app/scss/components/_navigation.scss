@@ -1,0 +1,10 @@
+.nav {
+
+  margin-bottom: 60px;
+  padding: 24px 0;
+  background-color: $light-orange;
+
+  &__list {
+    display: flex;
+  }
+}

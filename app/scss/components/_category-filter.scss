@@ -1,0 +1,7 @@
+.category-filter{
+  &__item{
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}

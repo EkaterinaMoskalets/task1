@@ -15,17 +15,17 @@ const del = require('del');
 const svgSprite = require('gulp-svg-sprite');
 const replace = require('gulp-replace');
 const cheerio = require('gulp-cheerio');
-const fileInclude   = require('gulp-file-include');
+const fileInclude = require('gulp-file-include');
 const browserSync = require('browser-sync').create();
 
 const htmlInclude = () => {
   return src(['app/html/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
-  .pipe(fileInclude({
-    prefix: '@',
-    basepath: '@file',
-  }))
-  .pipe(dest('app')) // указываем, в какую папку поместить готовый файл html
-  .pipe(browserSync.stream());
+    .pipe(fileInclude({
+      prefix: '@',
+      basepath: '@file',
+    }))
+    .pipe(dest('app')) // указываем, в какую папку поместить готовый файл html
+    .pipe(browserSync.stream());
 }
 
 const svgSprites = () => {
@@ -48,7 +48,7 @@ const svgSprites = () => {
         }
       },
     }))
- .pipe (dest('app/images'))
+    .pipe(dest('app/images'))
 }
 
 function browsersync() {
@@ -75,10 +75,13 @@ function styles() {
 }
 
 function scripts() {
-  return src(['node_modules/jquery/dist/jquery.js',
+  return src([
+      'node_modules/jquery/dist/jquery.js',
       'node_modules/mixitup/dist/mixitup.js',
       'node_modules/slick-carousel/slick/slick.js',
-      'app/js/main.js'
+      'app/js/main.js',
+      'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -112,16 +115,16 @@ function cleanDist() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js','!app/js/main.min.js'], scripts);
+  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
-  watch(['app/images/icons/**.svg'],svgSprites);
-  watch(['app/images/icons/**.svg']).on('change',browserSync.reload);
+  watch(['app/images/icons/**.svg'], svgSprites);
+  watch(['app/images/icons/**.svg']).on('change', browserSync.reload);
   watch(['app/html/**/*.html'], htmlInclude);
-  watch(['app/scss/**/*.scss']).on('change',browserSync.reload)
+  watch(['app/scss/**/*.scss']).on('change', browserSync.reload)
 }
 
-exports.htmlInclude=htmlInclude;
-exports.svgSprites =svgSprites;
+exports.htmlInclude = htmlInclude;
+exports.svgSprites = svgSprites;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
@@ -130,4 +133,4 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts,htmlInclude, svgSprites, browsersync, watching);
+exports.default = parallel(styles, scripts, htmlInclude, svgSprites, browsersync, watching);
