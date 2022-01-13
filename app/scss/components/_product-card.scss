@@ -4,12 +4,13 @@
   justify-content: space-between;
   align-items: center;
   max-width: 210px;
+  min-height: 300px;
   height: 100%;
   padding: 22px 14px;
   text-align: center;
   font-size: 15px;
   background-color: $white;
-  transition: box-shadow ease-in-out 0.5s;
+  transition: box-shadow ease-in-out 0.5s,border-radius ease 0.5s;
 
   &:hover {
     box-shadow: 0 0 0 1px #FF6838;
@@ -18,6 +19,7 @@
 
   @include r(576) {
     max-width: 235px;
+    min-height: 300px;
   }
 
   &__img {

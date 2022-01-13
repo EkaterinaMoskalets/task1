@@ -1,10 +1,27 @@
 .nav {
 
   margin-bottom: 60px;
-  padding: 24px 0;
+  padding: 14px 0 19px 0;
   background-color: $light-orange;
 
   &__list {
     display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    &--decoration{
+      padding-right: 17px;
+      background-image:url('../images/content/nav-arrow.svg');
+      background-size:10px 10px;
+      background-repeat:no-repeat;
+      background-position:right;
+    }
   }
 }

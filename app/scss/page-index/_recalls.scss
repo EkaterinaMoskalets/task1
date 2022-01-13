@@ -46,6 +46,7 @@
   }
 
   &__text p {
+    position: relative;
     margin-bottom: 30px;
     font-style: italic;
 
@@ -70,21 +71,22 @@
     }
 
     &::before {
-      left: -7%;
+ left: -38px;
 
       @include r(776) {
-        left: -13%;
-        top: -3%;
+        left: -34px;
+        top: -10px;
       }
     }
 
     &::after {
-      bottom: 36%;
-      right: -5%;
+      right: -40px;
+      bottom: 0;
       transform: scale(-1, 1);
 
       @include r(776) {
-        right: -13%;
+        right: -34px;
+      bottom: 11px;
       }
     }
   }
@@ -121,6 +123,7 @@
     display: block;
     margin-bottom: 5px;
     color: $accent;
+    font-style: normal;
     line-height: 1.3;
     font-size: 20px;
 
@@ -137,7 +140,7 @@
   .slick-dots {
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
+    padding-bottom: 7px;
 
     @include r(776) {
       position: absolute;
@@ -146,9 +149,6 @@
 
     li {
       button {
-        &:not(last-child) {
-          margin-left: 15px;
-        }
 
         width: 15px;
         height: 15px;
@@ -156,14 +156,19 @@
         font-size: 0;
         background-color: $grey;
         border-radius: 50%;
+        transition: box-shadow 0.5s ease,background-color 0.5s ease,color 0.5s ease;
+       
+        &:not(last-child) {
+          margin-left: 15px;
+        }
 
         &:focus {
-          box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+          @extend%orang-border;
         }
 
         &:hover {
           background-color: $light-orange;
-          box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+          @extend%orang-border;
         }
 
         &:active {
@@ -182,9 +187,8 @@
     }
   }
 
-  .slider-recall__arrow {
+  &__arrow {
     position: absolute;
-    bottom: 0;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
@@ -195,6 +199,33 @@
     border-radius: 50%;
     background-repeat: no-repeat;
     transition: box-shadow ease-in-out 0.5s, background-color ease 0.5s;
+   
+    &--prev {
+      position: absolute;
+      left: 42%;
+  
+      @include r(992) {
+        left: 41%;
+      }
+  
+      @include r(776) {
+        left: 16%;
+      }
+    }
+  
+    &--next {
+      position: absolute;
+      left: 59%;
+  
+      @include r(992) {
+        left: 61%;
+      }
+  
+      @include r(776) {
+        left: 85%;
+      }
+    }
+    
     &:focus {
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
     }
@@ -204,7 +235,7 @@
       border: 2px $accent solid;
       stroke: $accent;
 
-      .slider-recall {
+      .slider-recalls {
 
         &__profile {
           background-color: $light-orange;
@@ -227,31 +258,8 @@
     @include r(576) {
       top: 9%;
     }
+   
   }
 
-  .slider-recall__arrow--prev {
-    position: absolute;
-    left: 43%;
-
-    @include r(992) {
-      left: 41%;
-    }
-
-    @include r(776) {
-      left: 16%;
-    }
-  }
-
-  .slider-recall__arrow--next {
-    position: absolute;
-    left: 59%;
-
-    @include r(992) {
-      left: 61%;
-    }
-
-    @include r(776) {
-      left: 85%;
-    }
-  }
+  
 }

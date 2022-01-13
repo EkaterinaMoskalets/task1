@@ -1,13 +1,14 @@
 .user-nav {
-  position: relative;
   display: flex;
 
   &__link {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
+    border:transparent;
     transition: box-shadow ease-in-out 0.5s, text-decoration linear 0.5s, background-color ease 0.5s;
 
     &:not(:last-child) {
@@ -53,7 +54,7 @@
 
   &__num {
     position: absolute;
-    left: 78%;
+    left: 27px;
     top: 5px;
     text-align: center;
     padding: 1px 4px 1px 4px;

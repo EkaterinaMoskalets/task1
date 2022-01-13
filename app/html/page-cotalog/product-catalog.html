@@ -2,36 +2,99 @@
   <div class="container">
     <div class="product-catalog__top">
       <h2 class="title">Каталог продуктов</h2>
+      <form class="product-catalog__selects">
+        <label  class="sr-only" for="denotetion">Выбор по названию</label>
+        <select class="product-catalog__select" name="denotetion" id="denotetion">
+          <option value="">По названию</option>
+          <svg class="restauran-card__profile">
+            <use xlink:href="images/sprite.svg#arrow"></use>
+          </svg>
+        </select>
+        <label  class="sr-only" for=""></label>
+        <select class="product-catalog__select" name="" id="">
+          <option value="">По 12</option>
+          <svg class="restauran-card__profile">
+            <use xlink:href="images/sprite.svg#arrow"></use>
+          </svg>
+        </select>
+      </form>
     </div>
     <div class="product-catalog__inner">
       <div class="product-filter">
+
         <div class="category-filter product-filter__item">
           <h3 class="product-filter__title">Категории</h3>
           <ul class="category-filter__list">
-            <li class="category-filter__item">Бургеры</li>
-            <li class="category-filter__item">Пицца</li>
-            <li class="category-filter__item">Сендвичи</li>
-            <li class="category-filter__item">Азиатская кухня</li>
-            <li class="category-filter__item">Сеты</li>
-            <li class="category-filter__item">Европейская кухня</li>
-            <li class="category-filter__item">Напитки</li>
-            <li class="category-filter__item">Алкоголь</li>
+            <li class="category-filter__item">
+              <a class="category-filter__link text-decoration" href="#">Бургеры</a>
+            </li>
+            <li class="category-filter__item">
+              <a class="category-filter__link text-decoration" href="#">Пицца</a>
+            </li>
+            <li class="category-filter__item">
+              <a class="category-filter__link text-decoration" href="#">Сендвичи</a>
+            </li>
+            <li class="category-filter__item" href="#">
+              <a class="category-filter__link text-decoration">Азиатская кухня</a>
+            </li>
+            <li class="category-filter__item">
+              <a class="category-filter__link text-decoration" href="#">Сеты</a>
+            </li>
+            <li class="category-filter__item">
+              <a class="category-filter__link text-decoration" href="#">Европейская кухня</a>
+            </li>
+            <li class="category-filter__item">
+              <a class="category-filter__link text-decoration" href="#">Напитки</a>
+            </li>
+            <li class="category-filter__item">
+              <a class="category-filter__link text-decoration" href="#">Алкоголь</a>
+            </li>
           </ul>
         </div>
+
         <div class="proposal-filter product-filter__item">
           <h3 class="product-filter__title">Предложения</h3>
+          <form class="proposal-filter__form">
+            
+            <label class="proposal-filter__label" for="sale">
+              <input class="proposal-filter__input"name="sale" id="sale"  type="checkbox">
+              <span class="proposal-filter__checkbox"></span>
+              Со скидкой 
+            </label>
+           
+            <label class="proposal-filter__label" for="novelty">
+              <input class="proposal-filter__input" name="novelty" id="novelty" type="checkbox" checked>
+              <span class="proposal-filter__checkbox"></span>
+              Новинка
+            </label>
+          
+            <label class="proposal-filter__label" for="hit">
+              <input class="proposal-filter__input" name="hit" id="hit" type="checkbox" for="email">
+              <span class="proposal-filter__checkbox"></span>
+              Хит
+            </label>
         </div>
+
         <div class="price-filter product-filter__item">
           <h3 class="product-filter__title">Цена</h3>
-          <form class="price-filter__form" action="">
-         <input class="price-filter__input" type="text">
+          <div class="price-filter__form">
+            <label class="pice-filter__item">
+              <input class="price-filter__from price-filter__elem">
+            </label>
+            <label class="pice-filter__item">
+              <input class="price-filter__to price-filter__elem">
+            </label>
+          </div>
+
+          <form class="price-filter__forma">
+            <input class="price-filter__input" type="text" data-min="100" data-max="1000" data-from="100" data-to="900">
           </form>
         </div>
       </div>
       <div class="product-catalog__content">
         <ul class="product-catalog__list">
-          
-          <li class="product-catalog__item mix sandwich">
+
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/cheeseburger.jpg" alt="Бифбургер" width="140" height="140">
               <h3 class="product-card__title">Чизбургер с листьями салата</h3>
@@ -42,7 +105,7 @@
             </article>
           </li>
 
-          <li class="product-catalog__item mix sandwich">
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/beefburger.jpg" alt="Бифбургер" width="140" height="140">
               <h3 class="product-card__title">Бифбургер</h3>
@@ -53,7 +116,7 @@
             </article>
           </li>
 
-          <li class="product-catalog__item mix asia">
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/kingcheeseburger.jpg" alt="Королевский чизбургер" width="140" height="140">
               <h3 class="product-card__title">Королевский чизбургер</h3>
@@ -64,7 +127,7 @@
             </article>
           </li>
 
-          <li class="product-catalog__item mix sets">
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/blackburger.jpg" alt="Черный гамбургер" width="140" height="140">
               <h3 class="product-card__title">Черный гамбургер</h3>
@@ -74,7 +137,7 @@
               </div>
             </article>
           </li>
-          <li class="product-catalog__item mix sandwich">
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/cheeseburger.jpg" alt="Бифбургер" width="140" height="140">
               <h3 class="product-card__title">Чизбургер с листьями салата</h3>
@@ -85,7 +148,7 @@
             </article>
           </li>
 
-          <li class="product-catalog__item mix sandwich">
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/beefburger.jpg" alt="Бифбургер" width="140" height="140">
               <h3 class="product-card__title">Бифбургер</h3>
@@ -96,7 +159,7 @@
             </article>
           </li>
 
-          <li class="product-catalog__item mix asia">
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/kingcheeseburger.jpg" alt="Королевский чизбургер" width="140" height="140">
               <h3 class="product-card__title">Королевский чизбургер</h3>
@@ -107,7 +170,7 @@
             </article>
           </li>
 
-          <li class="product-catalog__item mix sets">
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/blackburger.jpg" alt="Черный гамбургер" width="140" height="140">
               <h3 class="product-card__title">Черный гамбургер</h3>
@@ -117,7 +180,8 @@
               </div>
             </article>
           </li>
-          <li class="product-catalog__item mix sandwich">
+
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/cheeseburger.jpg" alt="Бифбургер" width="140" height="140">
               <h3 class="product-card__title">Чизбургер с листьями салата</h3>
@@ -128,7 +192,7 @@
             </article>
           </li>
 
-          <li class="product-catalog__item mix sandwich">
+          <li class="product-catalog__item mix">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/beefburger.jpg" alt="Бифбургер" width="140" height="140">
               <h3 class="product-card__title">Бифбургер</h3>
@@ -139,7 +203,7 @@
             </article>
           </li>
 
-          <li class="product-catalog__item mix asia">
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/kingcheeseburger.jpg" alt="Королевский чизбургер" width="140" height="140">
               <h3 class="product-card__title">Королевский чизбургер</h3>
@@ -150,7 +214,7 @@
             </article>
           </li>
 
-          <li class="product-catalog__item mix sets">
+          <li class="product-catalog__item">
             <article class="product-card">
               <img class="product-card__img" src="images/burgers/blackburger.jpg" alt="Черный гамбургер" width="140" height="140">
               <h3 class="product-card__title">Черный гамбургер</h3>
@@ -161,6 +225,32 @@
             </article>
           </li>
         </ul>
+
+        <div class="pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a href="" class="pagination__link pagination__link--prev"></a>
+            </li>
+            <li class="pagination__item">
+              <a href="" class="pagination__link pagination__link--active">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="" class="pagination__link">2</a>
+            </li>
+            <li class="pagination__item">
+              <a href="" class="pagination__link">...</a>
+            </li>
+            <li class="pagination__item">
+              <a href="" class="pagination__link">9</a>
+            </li>
+            <li class="pagination__item">
+              <a href="" class="pagination__link">10</a>
+            </li>
+            <li class="pagination__item">
+              <a href="" class="pagination__link pagination__link--next"></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

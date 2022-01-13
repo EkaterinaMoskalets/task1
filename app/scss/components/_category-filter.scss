@@ -1,7 +1,11 @@
-.category-filter{
-  &__item{
+.category-filter {
+  &__list {
+    padding-top: 18px;
+  }
+
+  &__item {
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: 5px;
     }
   }
 }

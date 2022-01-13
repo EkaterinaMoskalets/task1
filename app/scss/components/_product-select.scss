@@ -1,0 +1,32 @@
+.jq-selectbox__select-text{
+  transition: color ease 0.5s;
+}
+.jq-selectbox__select{
+  height: 47px;
+  background: linear-gradient(#FFF, white);
+  border-radius: 3px;
+  box-shadow: none;
+  padding:5px 49px 0 13px ;
+  transition: box-shadow ease 0.5s, background ease 0.5s,  ;
+ 
+  &:focus {
+    color: $accent;
+    @extend%orang-border;
+    background: linear-gradient(#FFF, white);
+
+  }
+  &:hover {  
+  color:$accent;
+    @extend%orang-border;
+    background: linear-gradient(#FFF, white);
+    border:transparent;
+    
+    .jq-selectbox__select-text{
+      color:$accent;
+    }
+  }
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}

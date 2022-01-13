@@ -1,0 +1,42 @@
+<header class="header">
+  <div class="container">
+    <nav class="header__menu">
+      <a class="logo">
+        <img class="logo__img logo header__img focus-decoration" src="images/content/logo.svg" alt="Логотип" width="200" height="39">
+      </a>
+      <button class="burger"type="button">
+        <span class="burger__stripes"></span>
+        <span class="sr-only">Открыть меню</span>
+    </button>
+      <div class="header__inner">
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link text-decoration" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link text-decoration menu__link--orange" href="#">Блюда</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link text-decoration" href="#">Контакты</a>
+          </li>
+        </ul>
+        <div class="overlay"></div> 
+        <div class="user-nav">
+          <button class="user-nav__link" href="#" type="button">
+            <svg class="user-nav__profile">
+              <use xlink:href="images/sprite.svg#search-btn"></use>
+            </svg>
+            <span class="sr-only">поиск товаров</span>
+          </button>
+          <button class="user-nav__link" href="#" type="button">
+            <svg class="user-nav__profile">
+              <use xlink:href="images/sprite.svg#cart-btn"></use>
+            </svg>
+            <span class="sr-only">перейти к выбранным товарам</span>
+            <span class="user-nav__num">4</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

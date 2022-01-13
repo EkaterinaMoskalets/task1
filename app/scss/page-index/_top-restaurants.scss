@@ -17,7 +17,9 @@
       margin-bottom: 30px;
     }
   }
-
+  .slick-list{
+    border-radius:10px;
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
@@ -31,9 +33,9 @@
 
     @include r(620) {
       display: grid;
-      grid-template-columns: repeat(1, 2fr);
+      grid-template-columns: repeat(1, 2fr);    
     }
-
+    
     .slick-dots {
       display: flex;
       justify-content: center;
@@ -43,7 +45,7 @@
         bottom: -10%;
         left: 48%;
         transform: translateX(-50%);
-
+       
         li {
           button {
             &:not(last-child) {

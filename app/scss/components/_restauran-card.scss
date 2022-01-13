@@ -14,6 +14,10 @@
     max-width: 450px;
   }
 
+  @include r(620) {
+    max-width: 570px;
+  }
+
   &__content {
     padding: 0 20px 23px 20px;
   }
@@ -26,6 +30,12 @@
     @include r(992) {
       width: 450px;
     }
+
+    @include r(620) {
+      width: 570px;
+    }
+
+
   }
 
   &__title {
@@ -35,7 +45,6 @@
   }
 
   &__time {
-    display: flex;
     padding-left: 32px;
     font-size: 18px;
     background-size: 22px 22px;
@@ -50,12 +59,12 @@
   }
 
   &__link {
-    background-color: $accent;
-    border-radius: 20px;
-    padding: 10px 33px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 33px;
+    background-color: $accent;
+    border-radius: 20px;
     transition: box-shadow ease-in-out 0.5s, background-color ease 0.5s;
 
     &:hover {

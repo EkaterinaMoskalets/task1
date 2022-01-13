@@ -20,20 +20,14 @@
   }
 
   &__content {
-    width: 40%;
+    max-width: 470px;
   
     @include r(992) {
-      width: 50%;
       padding-top: 30px;
     }
 
     @include r(767) {
-      width: 87%;
       z-index: 2;
-    }
-
-    @include r(576) {
-      width: 100%;
     }
   }
 

@@ -1,17 +1,27 @@
 .burger-menu {
   position: fixed;
-  padding-left: 15px;
+  padding: 25px 0 0 15px;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   z-index: 5;
   display: none;
-  width: 85%;
+  max-width: 300px;
   background-color: $white;
-  transform: translateY(-200%);
+  transform: translateX(-200%);
   overflow: hidden;
   transition: transform 0.5s;
+
+  &.active {
+    transform: translateY(0);
+    transition: transform 0.7s;
+  }
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
 
   @include r(992) {
     display: block;
@@ -23,6 +33,8 @@
     &::after {
       content: '';
       position: absolute;
+      top: 45px;
+      right: 30px;
       width: 30px;
       height: 2px;
       background-color: $title;
@@ -30,21 +42,14 @@
     }
 
     &::before {
-      right: 30px;
-      top: 45px;
       transform: rotate(45deg);
     }
 
     &::after {
       transform: rotate(-45deg);
-      top: 45px;
-      right: 30px;
     }
   }
 
-  &__logo {
-    padding-top: 25px;
-  }
 
   &__item {
     padding: 25px 0 40px 0;
@@ -58,21 +63,7 @@
     }
   }
 
-  &__img {
-    width: 200px;
-    height: 39px;
-  }
-
   &__link {
     padding: 10px 0;
   }
-
-  &__link--orange {
-    color: $accent;
-  }
-}
-
-.burger-menu.active {
-  transform: translateY(0);
-  transition: transform 0.7s;
 }

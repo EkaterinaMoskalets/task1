@@ -1,0 +1,54 @@
+.proposal-filter {
+  &__form {
+    padding-top: 15px;
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked+.proposal-filter__checkbox {
+      background-image: url('../images/content/propsal-arrow.svg');
+      background-size: 12px 9px;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 1px solid $title;
+    }
+  }
+
+  &__label {
+    display: block;
+    padding-left: 35px;
+    transition: color ease 0.5s;
+
+    &:hover {
+      color: $accent;
+
+      .proposal-filter {
+        &__checkbox {
+          @extend%orang-border;
+        }
+      }
+    }
+
+    &:focus {
+      .proposal-filter {
+        &__checkbox {
+          @extend%orang-border;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin-left: -37px;
+    background-color: $light-orange;
+    transition: box-shadow ease 0.5s;
+  }
+}

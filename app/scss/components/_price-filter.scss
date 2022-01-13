@@ -1,0 +1,53 @@
+.price-filter {
+  &__form{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+  }
+ 
+  &__item:after{
+    position: absolute;
+    content:"₽" ;
+  }
+
+  &__elem { 
+    max-width: 70px;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.0;
+    background-color: rgba(255, 122, 80, 0.1);
+    border: transparent;
+    border-radius: 3px;
+    transition: box-shadow ease 0.3s;
+
+    &:focus {
+      @extend%orang-border;
+    }
+  }
+
+  .irs--round .irs-from,
+  .irs--round .irs-to,
+  .irs--round .irs-single,
+  .irs--round .irs-min,
+  .irs--round .irs-max {
+    display: none;
+  }
+
+  .irs--round .irs-line {
+    height: 2px;
+  }
+
+  .irs--round .irs-bar {
+    height: 2px;
+    background-color: $accent;
+  }
+
+  .irs--round .irs-handle {
+    width: 18px;
+    height: 18px;
+    border: transparent;
+    box-shadow: 0 0 0 0;
+    background-color: $accent;
+  }
+}

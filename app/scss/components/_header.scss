@@ -1,15 +1,15 @@
 .header {
-  padding: 60px;
+  padding: 58px;
 
   @include r(992) {
     padding: 25px 10px;
   }
 
   @include r(776) {
-    padding: 15px 10px 40px 0;
+    padding: 15px 13px 40px 0;
   }
 
-  &-logo__img {
+  &__img {
     @include r(992) {
       width: 150px;
       height: 30px;

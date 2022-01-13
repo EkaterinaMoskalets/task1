@@ -1,28 +1,28 @@
 .top-product {
   @include r(776) {
-  padding: 70px 0 30px 0;
+  padding: 70px 0 27px 0;
   }
   &__filter {
     display: flex;
     margin-bottom: 45px;
 
     @include r(1200) {
-      padding: 3px;
+      padding: 3px 0 9px 0;
       overflow-x:auto;
           scroll-snap-type: x mandatory; 
     }
     @include r(1200) {
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
   }
 
   &__elem {
-    &:not(last-child) {
+    &:not(:last-child) {
       margin-right: 20px;
     }
 
     @include r(992) {
-      &:not(last-child) {
+      &:not(:last-child) {
         margin-right: 10px;
       }
     }
@@ -46,7 +46,7 @@
     }
 
     @include r(767) {
-      padding: 12px 16px;
+      padding: 11px 14px;
       font-size: 14px;
     }
 

@@ -6,6 +6,7 @@
     font-size: 14px;
     border: 1px $grey solid;
     border-radius: 5px;
+    transition: color  ease 0.5s, border ease 0.5s;
 
     &:hover::placeholder {
       color: $title;
