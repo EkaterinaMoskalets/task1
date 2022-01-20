@@ -1,32 +1,56 @@
-.jq-selectbox__select-text{
+.jq-selectbox__select-text {
   transition: color ease 0.5s;
 }
-.jq-selectbox__select{
+
+.jq-selectbox__select {
   height: 47px;
   background: linear-gradient(#FFF, white);
   border-radius: 3px;
   box-shadow: none;
-  padding:5px 49px 0 13px ;
-  transition: box-shadow ease 0.5s, background ease 0.5s,  ;
- 
+  padding: 5px 49px 0 13px;
+  transition: box-shadow ease 0.5s, background ease 0.5s, ;
+
   &:focus {
     color: $accent;
     @extend%orang-border;
     background: linear-gradient(#FFF, white);
-
+    border: transparent;
   }
-  &:hover {  
-  color:$accent;
+
+  &:hover {
+    color: $accent;
     @extend%orang-border;
     background: linear-gradient(#FFF, white);
-    border:transparent;
-    
-    .jq-selectbox__select-text{
-      color:$accent;
+    border: transparent;
+
+    .jq-selectbox__select-text {
+      color: $accent;
     }
   }
 }
 
+.jq-selectbox li.selected {
+  background-color: $white;
+  color: $default;
+}
+
 .jq-selectbox__trigger {
   border-left: none;
+}
+
+.jq-selectbox {
+  z-index: 1;
+}
+
+.jq-selectbox__dropdown {
+  bottom: 45px;
+  box-shadow: none;
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+  border: 1px solid $grey;
+}
+
+.jq-selectbox li {
+  padding: 12px 11px 10px;
 }

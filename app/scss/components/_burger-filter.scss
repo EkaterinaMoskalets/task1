@@ -1,0 +1,33 @@
+.burger-filter {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: none;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  padding-right: 33px;
+  background-color: $light-orange;
+ 
+  @include r(992) {
+    display: block;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: $title;
+    transition: transform ease 0.5s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

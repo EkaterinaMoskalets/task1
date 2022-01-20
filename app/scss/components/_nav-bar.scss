@@ -1,8 +1,11 @@
-.nav {
-
+.nav-bar {
   margin-bottom: 60px;
   padding: 14px 0 19px 0;
   background-color: $light-orange;
+
+  @include r(776) {
+    margin-bottom: 40px;
+  }
 
   &__list {
     display: flex;
@@ -16,12 +19,13 @@
 
   &__link {
     font-size: 14px;
-    &--decoration{
+
+    &--decoration {
       padding-right: 17px;
-      background-image:url('../images/content/nav-arrow.svg');
-      background-size:10px 10px;
-      background-repeat:no-repeat;
-      background-position:right;
+      background-image: url('../images/content/nav-arrow.svg');
+      background-size: 10px 10px;
+      background-repeat: no-repeat;
+      background-position: right;
     }
   }
 }

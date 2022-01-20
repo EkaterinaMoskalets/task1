@@ -1,13 +1,79 @@
-<header class="header">
+<header class="header header-catalog">
   <div class="container">
     <nav class="header__menu">
       <a class="logo">
         <img class="logo__img logo header__img focus-decoration" src="images/content/logo.svg" alt="Логотип" width="200" height="39">
       </a>
-      <button class="burger"type="button">
+      <button class="burger" type="button">
         <span class="burger__stripes"></span>
         <span class="sr-only">Открыть меню</span>
-    </button>
+      </button>
+      <div class=" menu burger-menu">
+      <div class="burger-menu__inner">
+        <a class="logo burger-menu__logo" tabindex="0">
+          <img class="burger-menu__img focus-decoration" src="images/content/logo.svg" alt="Логотип" width="200" height="39">
+        </a>
+        <button class="burger-menu__btn" type="button">
+          <span class="sr-only">закрыть меню</span>
+        </button>
+      </div>
+        <ul class="burger-menu__item">
+          <li class="menu__item burger-menu__elem">
+            <a class="menu__link text-decoration" href="#">Главная</a>
+          </li>
+          <li class="menu__item burger-menu__elem">
+            <a class="menu__link text-decoration menu__link--orange" href="new__page.html">Блюда</a>
+          </li>
+          <li class="menu__itemb urger-menu__elem">
+            <a class="menu__link text-decoration" href="#">Контакты</a>
+          </li>
+        </ul>
+        <address class="contacts contacts--burger">
+          <ul class="contacts__item">
+            <li class="contacts__info contacts__info--location">
+              <a class="contacts__link " href="#">
+                ул. Смирнова 2/3
+              </a>
+            </li>
+            <li class="contacts__info  contacts__info--calling">
+              <a class="contacts__link" href="tel:79068057043:">
+                79068057043
+              </a>
+            </li>
+            <li class="contacts__info contacts__info--message">
+              <a class="contacts__link " href="mailto:support@sfood.com">
+                support@sfood.com
+              </a>
+            </li>
+          </ul>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__profile">
+                  <use xlink:href="images/sprite.svg#ic-facebook"></use>
+                </svg>
+                <span class="sr-only">перейти на фейсбук</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__profile">
+                  <use xlink:href="images/sprite.svg#ic-twitter"></use>
+                </svg>
+                <span class="sr-only">перейти в твиттер</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__profile">
+                  <use xlink:href="images/sprite.svg#ic-instagram"></use>
+                </svg>
+                <span class="sr-only">перейти в инстаграм</span>
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
       <div class="header__inner">
         <ul class="menu">
           <li class="menu__item">
@@ -20,7 +86,7 @@
             <a class="menu__link text-decoration" href="#">Контакты</a>
           </li>
         </ul>
-        <div class="overlay"></div> 
+        <div class="overlay"></div>
         <div class="user-nav">
           <button class="user-nav__link" href="#" type="button">
             <svg class="user-nav__profile">

@@ -28,6 +28,8 @@
   }
 
   &__btn {
+    width: 44px;
+    height: 44px;
 
     &::before,
     &::after {
@@ -50,6 +52,13 @@
     }
   }
 
+  &__inner {
+    display: flex;
+  }
+
+  &__logo {
+    margin-right: 17px;
+  }
 
   &__item {
     padding: 25px 0 40px 0;

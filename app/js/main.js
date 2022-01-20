@@ -2,8 +2,8 @@ $(function () {
  
   $(function() {
     var $overlay = $('.overlay'),
-        $overlayTrigger = $('.burger'),
-        $overlayClose = $('.burger-menu__btn'),
+        $overlayTrigger = $('.burger,.burger-catalog'),
+        $overlayClose = $('.burger-menu__btn,.burger-filter'),
         openClass = 'is-open';
   
         $overlayTrigger.on('click', function() {
@@ -17,6 +17,23 @@ $(function () {
           $overlay.removeClass(openClass);
         });
       });
+      // $(function() {
+      //   var $overlay = $('.overlay'),
+      //       $overlayTrigger = $('.burger-catalog'),
+      //       $overlayClose = $('.burger-filter'),
+      //       openClass = 'is-open';
+      
+      //       $overlayTrigger.on('click', function() {
+      //         var num = ('0' + ($(this).index() + 1)).slice(-2);
+      //         $('.overlay').addClass(openClass);
+      //         $overlayClose.addClass(openClass);
+      //       });
+          
+      //       $overlayClose.on('click', function() {
+      //         $overlayClose.removeClass(openClass);
+      //         $overlay.removeClass(openClass);
+      //       });
+      //     });
  $('.product-catalog__select').styler();
   // $(".price-filter__input").ionRangeSlider({
   //   type: "double",
@@ -105,8 +122,18 @@ $inputTo.on("input", function () {
   });
   $('.burger-menu__btn,.burger-menu').on('click', function () {
     $('.burger,.burger-menu').removeClass('active');
-
   });
+
+  $('.burger-catalog').on('click', function () {
+    $('.product-filter').addClass('active');
+    $('body').toggleClass('lock')
+  });
+  $('.burger-filter').on('click', function () {
+    $('.product-filter').removeClass('active');
+  });
+
+
+
   $(window).on('load resize', function () {
     if ($(window).width() < 620) {
 
@@ -124,7 +151,24 @@ $inputTo.on("input", function () {
       $(".top-restaurans__list.slick-initialized").slick("unslick");
     }
   });
+ 
+  $(window).on('load resize', function () {
+    if ($(window).width() < 620) {
 
+      $('.sales__list').slick({
+        centerMode: false,
+        prevArrow: false,
+        nextArrow: false,
+        dots: true,
+        infinite: true,
+        speed: 100,
+        // autoplay: true,
+        slidesToShow: 1
+      });
+    } else {
+      $(".sales__list.slick-initialized").slick("unslick");
+    }
+  });
 });
 
 

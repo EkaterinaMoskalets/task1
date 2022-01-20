@@ -9,8 +9,8 @@
 
   &__inner {
     display: flex;
-   justify-content: space-around;
-   align-items: center;
+    justify-content: space-around;
+    align-items: center;
 
     @include r(767) {
       position: relative;
@@ -21,7 +21,7 @@
 
   &__content {
     max-width: 470px;
-  
+
     @include r(992) {
       padding-top: 30px;
     }
@@ -91,6 +91,7 @@
       width: 348px;
       max-height: 462px;
       margin-right: 60px;
+
       @include r(767) {
         opacity: 0.2;
       }

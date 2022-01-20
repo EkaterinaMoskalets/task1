@@ -3,7 +3,24 @@
     margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
-   
+
+    @include r(992) {
+      margin-bottom: 30px;
+    }
+
+    @include r(600) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    @include r(600) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__elem {
+    display: flex;
   }
 
   &__inner {
@@ -16,5 +33,21 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-bottom: 60px;
+
+    @include r(992) {
+      margin-bottom: 30px;
+    }
+
+    @include r(776) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    @include r(576) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 5px;
+    }
   }
 }

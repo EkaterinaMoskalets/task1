@@ -1,0 +1,16 @@
+.burger-catalog {
+  display: none;
+  width: 47px;
+  height: 47px;
+  background-color: $light-orange;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/content/btn-filter.svg');
+
+  @include r(992) {
+    display: block;
+    margin-right: 10px;
+  }
+
+}

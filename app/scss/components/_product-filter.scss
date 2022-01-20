@@ -1,20 +1,44 @@
 .product-filter {
+  display: block;
+
+  @include r(1200) {
+    margin-right: 30px;
+  }
+
+  @include r(992) {
+    position: absolute;
+    top: 0;
+    margin-right: 0;
+    padding: 80px 50px 30px 0;
+    transform: translateX(-200%);
+    transition: transform 0.7s;
+    overflow-x: auto;
+    background-color: $white;
+
+    &.active {
+      transform: translateX(-5%);
+      transition: transform 0.7s;
+      z-index: 10;
+    }
+  }
+
   &__title {
+    padding-bottom: 15px;
     font-size: 24px;
     font-weight: 400;
     color: $title;
-    padding-bottom: 15px;
     border-bottom: 1px solid $silver;
   }
 
   &__item {
+    width: 270px;
+    padding: 10px 15px 25px 15px;
+    border-radius: 5px;
+    background-color: $white;
+    border: 1px solid $silver;
+
     &:not(:last-child) {
       margin-bottom: 25px;
     }
-    width: 270px;
-    padding: 10px 15px 25px 15px;
-    border-radius:5px;
-    background-color:$white;
-    border: 1px solid $silver;
   }
 }

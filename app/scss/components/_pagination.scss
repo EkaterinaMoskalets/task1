@@ -14,13 +14,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 48px;
+    width: 48px;
     height: 100%;
     padding: 9px 12px;
     font-size: 18px;
     border-radius: 3px;
     background-color: $light-orange;
     transition: box-shadow ease 0.5s, background-color ease 0.5s;
+
+    &--decoration {
+      &:focus {
+        @extend%orang-border;
+      }
+
+      &:hover {
+        background-color: $accent;
+      }
+
+      &:active {
+        box-shadow: inset 0px -1px 4px 2px rgba(0, 0, 0, 0.15);
+      }
+    }
 
     &--active {
       border: 1px solid $title;
@@ -41,16 +55,13 @@
       background-image: url("../images/content/pagination-next.svg");
     }
 
-    &:focus {
-      @extend%orang-border;
+    &--hidden {
+      @include r(576) {
+        display: none;
+      }
+
+
     }
 
-    &:hover {
-      background-color: $accent;
-    }
-
-    &:active {
-      box-shadow: inset 0px -1px 4px 2px rgba(0, 0, 0, 0.15);
-    }
   }
 }

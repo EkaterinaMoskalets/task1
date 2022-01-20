@@ -1,7 +1,7 @@
 .burger {
   position: relative;
   order: 1;
-  padding: 22px;
+padding:22px 39px 22px 11px ;
   display: none;
 
   @include r(992) {
